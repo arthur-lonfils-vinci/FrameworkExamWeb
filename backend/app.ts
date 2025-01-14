@@ -1,12 +1,9 @@
-/*
-This file needs to be updated for the need of the exam (if needed, else remove it).
-*/
-
 import express, { ErrorRequestHandler } from "express";
 import cors from "cors";
+
 import usersRouter from "./routes/users";
+import bookRouter from "./routes/exam";
 import authsRouter from "./routes/auths";
-//add required routes for the exam
 
 
 const app = express();
@@ -31,8 +28,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use("/users", usersRouter);
+app.use("/books", bookRouter);
 app.use("/auths", authsRouter);
-//add required routes for the exam
 
 
 const errorHandler: ErrorRequestHandler = (err, _req, res, _next) => {

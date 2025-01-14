@@ -1,8 +1,43 @@
-/*
-This file needs to be updated for the need of the exam (if needed, else remove it).
-*/
-
 import { Request } from "express";
+
+// NEW INTERFACES AND TYPES FOR THE PROJECT
+
+export interface Book {
+  id: number;
+  title: string;
+  author: string;
+  creationDate: string;
+  image?: string;
+}
+
+export type NewBook = Omit<Book, "id">;
+
+
+
+
+// INTERFACES AND TYPES ALREADY DEFINED IN THE PROJECT
+interface Pizza {
+  id: number;
+  title: string;
+  content: string;
+}
+
+interface PizzaToUpdate {
+  title?: string;
+  content?: string;
+}
+
+type NewPizza = Omit<Pizza, "id">;
+
+interface Drink {
+  id: number;
+  title: string;
+  image: string;
+  volume: number;
+  price: number;
+}
+
+type NewDrink = Omit<Drink, "id">;
 
 interface AuthenticatedUser {
   username: string;
@@ -27,13 +62,16 @@ interface JwtPayload {
   iat: number; // Issued at time (in seconds since the epoch)
 }
 
-//add required interface for the exam
 
 export type {
+  Pizza,
+  NewPizza,
+  PizzaToUpdate,
+  Drink,
+  NewDrink,
   AuthenticatedUser,
   User,
   PotentialUser,
   AuthenticatedRequest,
   JwtPayload,
-  //add required interface export for the exam
 };

@@ -1,11 +1,9 @@
-import React from 'react';
-import { AppBar } from '@mui/material';
-import Menu from '../navbar';
-const Header: React.FC = () => {
-    return (
-        <AppBar position="static">
-            <Menu />
-        </AppBar>
-    );
+import { Menu}  from '../navbar';
+
+export const Header = () => {
+  return (
+    <header>
+        <Menu />
+    </header>
+  );
 };
-export default Header;

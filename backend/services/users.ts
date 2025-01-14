@@ -4,7 +4,7 @@ import path from "node:path";
 import { parse, serialize } from "../utils/json";
 import { AuthenticatedUser, User } from "../types";
 
-const jwtSecret = "AdzdaojceocnacnpacakncoejncoNConOJCAO";
+const jwtSecret = "ilovemypizza!";
 const lifetimeJwt = 24 * 60 * 60 * 1000; // in ms : 24 * 60 * 60 * 1000 = 24h
 
 const saltRounds = 10;

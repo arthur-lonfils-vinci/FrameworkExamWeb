@@ -8,8 +8,6 @@ package-lock.json
 .env
 # ignore all dist directories files (and subdirectories) from .gitignore
 dist/*
-# ignore all the JSON data files within data directories
-**/data/*.json
 # but (re)include specific dist directory files, e.g.
 #!frontend-essentials/step-1/dist
 build 

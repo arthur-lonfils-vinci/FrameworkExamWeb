@@ -1,6 +1,0 @@
-# This file needs to be updated for the need of the exam (if needed, else remove it).
-
-@baseUrl = http://localhost:3000
-
-### GET the data needed for the exam (need to edit)
-GET {{baseUrl}}/example

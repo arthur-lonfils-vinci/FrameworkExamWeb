@@ -1,0 +1,21 @@
+[
+  {
+    "id": 2,
+    "title": "Le Grand Voyage",
+    "author": "Charlotte Dupont",
+    "creationDate": "2021-11-15"
+  },
+  {
+    "id": 3,
+    "title": "La Nuit de l'Océan",
+    "author": "Marcel Marin",
+    "creationDate": "2022-01-10",
+    "image": "https://example.com/image2.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Terre Promise",
+    "author": "Anne Martin",
+    "creationDate": "2023-03-05"
+  }
+]
