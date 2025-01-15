@@ -4,8 +4,9 @@
 // Books/Book/book -> with the exam variables name
 
 import { Router } from "express";
-import { readAllBooks, readBookById } from "../services/exam"; //CHANGE
+import { createBook, deleteBook, readAllBooks, readBookById } from "../services/exam"; //CHANGE
 import { authorize, isAdmin } from "../utils/auths";
+import { NewBook } from "../types";
 
 const router = Router();
 
@@ -28,6 +29,23 @@ router.get("/:id", authorize, isAdmin, (req, res) => {
   const book = readBookById(id);//CHANGE
   if (!book) return res.sendStatus(404);
   return res.json(book);
+});
+
+
+// ROUTE ADD & DELETE IF needed
+
+// Add a new book
+router.post('/', (req, res) => {
+  const newBook = req.body as NewBook;
+  const newBookAdded = createBook(newBook);
+  res.status(201).json(newBookAdded);
+});
+
+// Delete a book by id
+router.delete('/:id', (req, res) => {
+  const bookId = parseInt(req.params.id);
+  deleteBook(bookId);
+  res.status(204).send();
 });
 
 export default router;
